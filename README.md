@@ -52,11 +52,11 @@
 
 
 1. To convert iSNV table into vcf format(VCFv4.1) that can be recognized by SnpEff software: 
-   python ./scripts/Variantions_annotion/iSNVTable_2_vcf_allsample.py -i ./data/ -o $allsamplesVcfPath -r MN908947.3
+   `python ./scripts/Variantions_annotion/iSNVTable_2_vcf_allsample.py -i ./data/ -o $allsamplesVcfPath -r MN908947.3`
 
-2. Annoting the mutation by using SnpEff software ,for example: java -jar snpEff.jar ann MN908947 $$allsamplesVcfPath/${sample}.vcf >$outSnpeff/{sample}.snpeffAnno.vcf
+2. Annoting the mutation by using SnpEff software ,for example: `java -jar snpEff.jar ann MN908947 $$allsamplesVcfPath/${sample}.vcf >$outSnpeff/{sample}.snpeffAnno.vcf`
 
-3. To Integrate all the samples' mutations annotion files into a single file: python Snpeff_results_integrateTo1file -i $outSnpeff/ -o ./data/allsampMutatAnno.txt
+3. To Integrate all the samples' mutations annotion files into a single file: `python Snpeff_results_integrateTo1file -i $outSnpeff/ -o ./data/allsampMutatAnno.txt`
 
 
 
